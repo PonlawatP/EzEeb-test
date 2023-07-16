@@ -30,6 +30,10 @@ router.get('/',async (req,res)=>{
   sessions.reg_show = '<p>ทำตามเงื่อนไขหากยังไม่มีบัญชี <a href="/regform">สร้างบัญชี</a></p>'
   sessions.inout = '<a class="btn btn-outline-light" href="/loginform">เข้าสู่ระบบ</a>'
   res.render('index.ejs',{sessions:sessions})
+
+  
+  console.log('Cookies: ', req.cookies)
+  console.log('Signed Cookies: ', req.signedCookies)
 })
 
 router.get('/regform',(req,res)=>{
